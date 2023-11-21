@@ -90,7 +90,7 @@
             L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
            }).addTo(map1);
-		        map1.attributionControl.addAttribution('Sandy Burnely, Jeffrey Burnett, Meng Cai, & Katie Knowles, <a href="https://chi.anthropology.msu.edu/", class="your_class">CHI MSU 2021</a>');
+		        map1.attributionControl.addAttribution('Jessica Pettengill, Morgan Hills, Priyanka Jayakodi, and Emily Nisch, <a href="https://chi.anthropology.msu.edu/", class="your_class">CHI MSU 2023-2024</a>');
 	  
             //Begin geoJSON data
             var dataset1 = [
@@ -102,10 +102,10 @@
                             [-77.6336111, 36.46], //Change longitude and latitude coordinates
                     },
                     properties: {
-                        title: 'Keys v. Carolina Coach Co. - Roanoak Rapids, NC', //Change title to include location and title
-                        description: 'The U.S. Supreme Court handed down its decision in favor of Sarah Louise Keys, a Black woman and WAC private who was forced by a bus driver to give her seat at the front of the bus to a white male marine. On August 1, 1952, Keys was arrested for refusing to give up her seat, which at the time was within her legal rights due to the <i>Morgan v. Virginia</i> Supreme Court case in 1956, which legally ended Jim Crow laws on interstate public transportation, but did not culturally end segregation practices in the South. This case created important precedent for federal desegregation and was the major legal precedent for future laws enacted during and after the Summer of Freedom. <a href="https://en.wikipedia.org/wiki/Keys_v._Carolina_Coach_Co.">Learn more.</a>', //Change description to include text, image found in img folder, and link
+                        title: '<i>Keys v. Carolina Coach Co.</i> | Roanoak Rapids, NC', //Change title to include location and title
+                        description: 'The U.S. Supreme Court handed down its decision in favor of Sarah Louise Keys, a Black woman and WAC private who was forced to give her seat at a bus terminal to a white male marine on August 1, 1952. Keys was arrested for refusing to give up her seat. While at the time this was within her legal right if it occurred on a bus due to the <i>Morgan v. Virginia</i> Supreme Court case in 1956, the ruling did not extend to spaces outside of interstate transportation. <i>Morgan v. Virginia</i> legally ended Jim Crow segregation laws on interstate public transportation, but did not legally end segragation laws outside of transportation, nor did it culturally end segregation practices in the South. This case created major legal precedent for future desegregation laws enacted during and after the Summer of Freedom. <a href="https://en.wikipedia.org/wiki/Keys_v._Carolina_Coach_Co." target="_blank">Learn more.</a>', //Change description to include text, image found in img folder, and link
                         time: '1954/05/17', //Change date to year, month, day
-                        image: 'img/Sarah-Louise-Keys.jpg', //change to image title in img folder
+                        image: 'img/Sarah_Louise_Keys.jpg', //change to image title in img folder
                         icon: {
                             iconUrl: 'img/bus.png',
                             iconSize: [40, 40],
@@ -120,13 +120,13 @@
                     geometry: {
                         type: 'Point',
                         coordinates: 
-                            [-77.6336111, 36.46], //Change longitude and latitude coordinates
+                            [-76.609383, 39.299236], //Change longitude and latitude coordinates
                     },
                     properties: {
-                        title: 'Keys v. Carolina Coach Co. - Roanoak Rapids, NC', //Change title to include location and title
-                        description: 'Insert Information Here', //Change description to include text, image found in img folder, and link
+                        title: '<i>Morgan v. Virginia</i> | Baltimore, MD', //Change title to include location and title
+                        description: 'The U.S. Supreme Court handed down its decision in favor of Irene Morgan, a Black woman who was arrested in 1946 on an interstate bus heading toward Baltimore, Maryland after refusing to move to the "colored" section of the bus at the demand of the driver. This was a major federal precedent for desegragation. However, the ruling only applied to bus seats, not terminals, bathrooms, restaurants, etc. largely due to the fact that the public transportation dealt with interstate travel, which violated the Interstate Commerce Clause of the U.S. Constitution. <a href="https://en.wikipedia.org/wiki/Morgan_v._Virginia" target="_blank">Learn more.</a>', //Change description to include text, image found in img folder, and link
                         time: '1956/06/03', //Change date to year, month, day
-                        image: 'img-title-here.jpg', //change to image title in img folder
+                        image: 'img/IreneMorgan.jpg', //change to image title in img folder
                         icon: {
                             iconUrl: 'img/bus.png',
                             iconSize: [40, 40],
