@@ -1,0 +1,211 @@
+
+<html lang="en">
+    <head>
+        <!--jquery js-->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- leaflet files -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+            <style>
+                #myMap {position: absolute; top: 0; bottom: 0; left: 0; right:0;}
+          </style>
+    
+        <!--jQuery UI files-->
+            <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+        <!--jQuery UI Touch js, required for touchscreen use-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+            <script src="js/SliderControl.js"></script>
+            <link rel="stylesheet" href= "textbox.css" />  
+	    <link rel="stylesheet" href="leaflet-sidebar.css" />
+	  <script src="js/leaflet-sidebar.js"></script>
+	  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	  <link rel="stylesheet" type="text/css" href="L.Control.ZoomBar.css"/>
+	  <script type="text/javascript" src="js/L.Control.ZoomBar.js"></script>
+    <style>
+                .lorem {
+            font-style: normal;
+            color: #000000;
+        }
+
+        html, body, #map {
+            height: 100%;
+            font: 14pt "Helvetica Neue", Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+    </style>
+        </head>
+   <body>
+        <div id="myMap"<>/div>
+	<div id="sidebar" class="leaflet-sidebar collapsed">
+        <!-- Nav tabs -->
+        <div class="leaflet-sidebar-tabs">
+            <ul role="tablist">
+                <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
+                <li><a href="#profile" role="tab"><i class="fa fa-bookmark"></i></a></li>
+                <li><a href="#messages" role="tab"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+        <!-- add more tab panes here, copy / paste -->   
+        </div>
+
+        <!-- Tab panes -->
+        <div class="leaflet-sidebar-content">
+            <div class="leaflet-sidebar-pane" id="home">
+                <h1 class="leaflet-sidebar-header">
+                    Summer of the Freedom Riders 
+                    <span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
+                </h1>
+
+                
+
+                <p class="lorem">Insert narrative here.</p>
+            </div>
+
+            <div class="leaflet-sidebar-pane" id="profile">
+                <h1 class="leaflet-sidebar-header">References<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+		  <br>
+		  <li><a href="https://www.amazon.com/Freedom-Riders-Struggle-Justice-American/dp/0195327144" target="_blank">Arsenault, R.</a> (2006).<i>Freedom Riders: 1961 and the Struggle for Racial Justice</i>Oxford University Press.</li>
+            </div>
+
+            <div class="leaflet-sidebar-pane" id="messages">
+                <h1 class="leaflet-sidebar-header">Team<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+		    <p>Jessica Pettengill</p><p>Morgan Hill</p><p>Priyanka Jayakodi</p><p>Emily Nisch</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="myMap" class="sidebar-map"></div> 
+	   
+        <script>
+            var map1 = L.map ('myMap', {
+		    	minZoom: 5,
+                        maxZoom: 12,
+		    zoomControl: false}).setView([37.745, -81.211], 5);
+           
+            L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+           }).addTo(map1);
+		        map1.attributionControl.addAttribution('Sandy Burnely, Jeffrey Burnett, Meng Cai, & Katie Knowles, <a href="https://chi.anthropology.msu.edu/", class="your_class">CHI MSU 2021</a>');
+	  
+            //Begin geoJSON data
+            var dataset1 = [
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: 
+                            [-77.6336111, 36.46],
+                    },
+                    properties: {
+                        title: 'Keys v. Carolina Coach Co. - Roanoak Rapids, NC',
+                        description: 'Insert Information Here',
+                        time: '1954/05/17',
+                        image: 'img-title-here.jpg',
+                        icon: {
+                            iconUrl: 'img/bus.png',
+                            iconSize: [40, 40],
+                            iconAnchor: [3, 35],
+                            popupAnchor: [0, -41],
+                            className: 'dot',
+                        }
+                    }
+                },
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: 
+                            [-90.159821, 38.616405],
+                    },
+                    properties: {
+                        title: 'Little Freedom Ride: East St. louis, IL',
+                        description: 'Insert Information Here',
+                        time: '1961/04/22',
+                        image: 'img-title-here.jpg',
+                        icon: {
+                            iconUrl: 'img/bus.png',
+                            iconSize: [40, 40],
+                            iconAnchor: [3, 35],
+                            popupAnchor: [0, -41],
+                            className: 'dot',
+                        }
+                    }
+                },
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-77.0364, 38.8951]
+                    },
+                    properties: {
+                        title: 'Original CORE Freedom Ride: Washington D.C.',
+                        description: 'Insert Information Here',
+                        time: '1961/05/04',
+                        image: 'html/Mijos_diner.jpeg',
+                        icon: {
+                            iconUrl: 'img/bus.png',
+                            iconSize: [40, 40],
+                            iconAnchor: [3, 35],
+                            popupAnchor: [0, -41],
+                            className: 'dot',
+                        }
+                    }
+                }
+            ];
+            var optionsObject = {
+                onEachFeature: onEachFeature
+            };
+            function onEachFeature (feature, layer) {
+               var content = "<div style='clear: both'></div><div style='float: left; padding: 5px; margin-right: 10px'><img style='width: 200px;' src=" + feature.properties.image + " /></div><div><h4>" + feature.properties.title + "</h4><p>" + feature.properties.time + "</p><p>" + feature.properties.description + "</p></div>";
+               layer.setIcon(L.icon(feature.properties.icon));
+                layer.bindPopup(content, {closeButton: true});
+            };
+            var group1 = L.geoJSON(dataset1, optionsObject);
+            var sliderControl1 = L.control.sliderControl( {
+    layer: group1, // REQUIRED
+    alwaysShowDate: true, // to make the date box below the slider persistent
+    showAllPopups: false, // to show all popups, instead of only one; same as the popup option "autoClose: false"
+    showPopups: false // to set it so, when a marker is generated by the slider, its popup doesn't automatically display
+});
+            
+    // Add the slider to the map
+map1.addControl(sliderControl1);
+
+// Initialize the slider
+sliderControl1.startSlider();
+                
+var sidebar = L.control.sidebar({ container: 'sidebar' })
+            .addTo(map1)
+            .open('home');
+		
+ // add panels dynamically to the sidebar
+        sidebar
+            .addPanel({
+                id:   'js-api',
+                tab:  '<i class="fa fa-users"></i>',
+                title: 'JS API',
+                pane: '<p>The Javascript API allows to dynamically create or modify the panel state.<p/><p><button onclick="sidebar.enablePanel(\'mail\')">enable mails panel</button><button onclick="sidebar.disablePanel(\'mail\')">disable mails panel</button></p><p><button onclick="addUser()">add user</button></b>',
+            })
+                        
+            
+	var userid = 0
+        function addUser() {
+            sidebar.addPanel({
+                id:   'user' + userid++,
+                tab:  '<i class="fa fa-user"></i>',
+                title: 'User Profile ' + userid,
+                pane: '<p>user ipsum dolor sit amet</p>',
+            });
+        }
+
+var zoom_bar = new L.Control.ZoomBar({position: 'topright'}).addTo(map1);
+       
+	   </script>
+	</body>
+</html>
+	   
