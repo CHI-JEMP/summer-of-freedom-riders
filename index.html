@@ -99,13 +99,34 @@
                     geometry: {
                         type: 'Point',
                         coordinates: 
-                            [-77.6336111, 36.46],
+                            [-77.6336111, 36.46], //Change longitude and latitude coordinates
                     },
                     properties: {
-                        title: 'Keys v. Carolina Coach Co. - Roanoak Rapids, NC',
-                        description: 'Insert Information Here',
-                        time: '1954/05/17',
-                        image: 'img-title-here.jpg',
+                        title: 'Keys v. Carolina Coach Co. - Roanoak Rapids, NC', //Change title to include location and title
+                        description: 'The U.S. Supreme Court handed down its decision in favor of Sarah Louise Keys, a Black woman and WAC private who was forced by a bus driver to give her seat at the front of the bus to a white male marine. On August 1, 1952, Keys was arrested for refusing to give up her seat, which at the time was within her legal rights due to the <i>Morgan v. Virginia</i> Supreme Court case in 1956, which legally ended Jim Crow laws on interstate public transportation, but did not culturally end segregation practices in the South. This case created important precedent for federal desegregation and was the major legal precedent for future laws enacted during and after the Summer of Freedom. <a href="https://en.wikipedia.org/wiki/Keys_v._Carolina_Coach_Co.">Learn more.</a>', //Change description to include text, image found in img folder, and link
+                        time: '1954/05/17', //Change date to year, month, day
+                        image: 'img/Sarah-Louise-Keys.jpg', //change to image title in img folder
+                        icon: {
+                            iconUrl: 'img/bus.png',
+                            iconSize: [40, 40],
+                            iconAnchor: [3, 35],
+                            popupAnchor: [0, -41],
+                            className: 'dot',
+                        }
+                    }
+                },
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: 
+                            [-77.6336111, 36.46], //Change longitude and latitude coordinates
+                    },
+                    properties: {
+                        title: 'Keys v. Carolina Coach Co. - Roanoak Rapids, NC', //Change title to include location and title
+                        description: 'Insert Information Here', //Change description to include text, image found in img folder, and link
+                        time: '1956/06/03', //Change date to year, month, day
+                        image: 'img-title-here.jpg', //change to image title in img folder
                         icon: {
                             iconUrl: 'img/bus.png',
                             iconSize: [40, 40],
